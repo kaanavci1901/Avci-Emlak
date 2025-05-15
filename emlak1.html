@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avcı Emlak</title>
+  <link rel="stylesheet" href="css/emlak2.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">AVCI Emlak</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Anasayfa</a></li>
+          <li><a href="#ilanlar">İlanlar</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-section">
+    <div class="container">
+      <h2>Evinizi Hemen Bulun!</h2>
+      <input type="text" id="searchInput" placeholder="Şehir, ilçe veya mahalle girin...">
+      <button onclick="aramaYap()">Ara</button>
+    </div>
+  </section>
+
+  <section class="filter-section container">
+    <label>
+      Oda Sayısı:
+      <select id="odaSelect">
+        <option value="hepsi">Hepsi</option>
+        <option value="1+1">1+1</option>
+        <option value="2+1">2+1</option>
+        <option value="3+1">3+1</option>
+      </select>
+    </label>
+    <label>
+      Max Fiyat:
+      <input type="number" id="fiyatMax" placeholder="TL">
+    </label>
+    <button onclick="filtrele()">Filtrele</button>
+  </section>
+
+  <!-- İlanlar -->
+  <section class="ilanlar container" id="ilanlar">
+    <div class="ilan-karti">
+      <img src="fotolar/apartman-4668-m2-b.jpg" alt="Ev 1">
+      <h3>3+1 Daire - İstanbul</h3>
+      <p>Fiyat: 15.200.000 TL</p>
+      <a href="ilan1.html" class="detay-btn">Detaylar</a>
+    </div>
+
+    <div class="ilan-karti">
+      <img src="fotolar/apartman-kurallari-855x855.jpg" alt="Ev 2">
+      <h3>2+1 Bahçeli - Ankara</h3>
+      <p>Fiyat: 9.100.000 TL</p>
+      <button>Detaylar</button>
+    </div>
+
+    <div class="add-listing-container">
+      <button class="add-listing-button">İlan Ekle</button>
+    </div>
+
+    <div class="ilan-karti">
+      <img src="fotolar/istockphoto-1440568749-612x612.jpg" alt="Ev 3">
+      <h3>1+1 Loft - İzmir</h3>
+      <p>Fiyat: 8.000.000 TL</p>
+      <button>Detaylar</button>
+    </div>
+  </section>
+
+  <!-- Hakkımızda -->
+  <section id="hakkimizda" class="container" style="margin-bottom: 40px;">
+    <h2>Hakkımızda</h2>
+    <p style="text-align:center;">Avcı Emlak, Türkiye genelinde en güvenilir emlak hizmetini sunar. 10 yılı aşkın deneyimimizle hayalinizdeki evi bulmanız için buradayız.</p>
+  </section>
+
+  <!-- İletişim -->
+  <section id="iletisim" class="container" style="margin-bottom: 40px;">
+    <h2>İletişim</h2>
+    <p style="text-align:center;">Bize ulaşmak için: <br> Email: avciemlak@gmail.com | Telefon: 0539 367 52 28</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Avcı Emlak | Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="js/emlak.js"></script>
+</body>
+</html>
+
