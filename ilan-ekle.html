@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İlan Ekle - Avcı Emlak</title>
+
+  <!-- Harici stil dosyasının bağlantısı -->
+  <link rel="stylesheet" href="css/emlak2.css" />
+
+  <!-- Sayfa içi özel stiller -->
+  <style>
+    .form-container {
+      max-width: 600px; /* Formun maksimum genişliği */
+      margin: 50px auto; /* Ortalamak için üstten 50px boşluk ve otomatik yatay boşluk */
+      background: #f8f8f8; /* Açık gri arka plan */
+      padding: 30px; /* İç boşluk */
+      border-radius: 12px; /* Köşeleri yumuşatma */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Hafif gölge efekti */
+    }
+    .form-container h2 {
+      text-align: center; /* Başlığı ortala */
+      margin-bottom: 20px; /* Alt boşluk */
+    }
+    .form-container input, .form-container select, .form-container textarea {
+      width: 100%; /* Genişliği form boyunca yay */
+      padding: 10px; /* İç boşluk */
+      margin-bottom: 15px; /* Alt boşluk */
+      border: 1px solid #ccc; /* Gri kenarlık */
+      border-radius: 6px; /* Köşe yumuşatma */
+    }
+    .form-container button {
+      width: 100%; /* Buton form boyunca genişlesin */
+      padding: 12px; /* İç boşluk */
+      background-color: #2e86de; /* Mavi arka plan */
+      color: white; /* Beyaz yazı */
+      border: none; /* Kenarlık yok */
+      border-radius: 6px; /* Köşeleri yumuşatma */
+      font-size: 16px; /* Yazı boyutu */
+      cursor: pointer; /* Üzerine gelince imleç değişsin */
+    }
+    .form-container button:hover {
+      background-color: #1b4f72; /* Hover rengi */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Formun bulunduğu ana kapsayıcı -->
+  <div class="form-container">
+    <h2>Yeni İlan Ekle</h2>
+    
+    <!-- İlan ekleme formu -->
+    <form id="ilanForm">
+      <!-- İlan başlığı alanı -->
+      <input type="text" id="baslik" placeholder="İlan Başlığı" required />
+
+      <!-- Şehir bilgisi -->
+      <input type="text" id="sehir" placeholder="Şehir / İlçe" required />
+
+      <!-- Oda sayısı seçimi -->
+      <select id="oda">
+        <option value="">Oda Sayısı Seçin</option>
+        <option value="1+1">1+1</option>
+        <option value="2+1">2+1</option>
+        <option value="3+1">3+1</option>
+      </select>
+
+      <!-- Fiyat bilgisi -->
+      <input type="number" id="fiyat" placeholder="Fiyat (TL)" required />
+
+      <!-- İlan görseli için URL -->
+      <input type="url" id="resim" placeholder="Görsel URL'si" required />
+
+      <!-- Açıklama alanı -->
+      <textarea id="aciklama" placeholder="Açıklama" rows="4"></textarea>
+
+      <!-- Formu gönder butonu -->
+      <button type="submit">İlanı Kaydet</button>
+    </form>
+  </div>
+
+  <!-- Form gönderildiğinde çalışacak basit bir JavaScript -->
+  <script>
+    // Form gönderildiğinde tetiklenir
+    document.getElementById("ilanForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Sayfanın yenilenmesini engeller
+
+      // Bilgilendirme mesajı (örnek amaçlı)
+      alert("İlan başarıyla eklendi (Not: Bu örnek sadece tasarımsal, veritabanına kaydedilmez).");
+
+      // Formu sıfırlama
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>

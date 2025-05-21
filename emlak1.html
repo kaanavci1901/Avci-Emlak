@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html> <!-- HTML5 belgesi olduğunu belirtir -->
+<html lang="tr"> <!-- Sayfa dili Türkçe olarak ayarlanır -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Avcı Emlak</title>
-  <link rel="stylesheet" href="css/emlak2.css" />
+  <meta charset="UTF-8" /> <!-- Türkçe karakter desteği sağlar -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Mobil uyumlu tasarım için -->
+  <title>Avcı Emlak</title> <!-- Tarayıcı sekmesinde görünen başlık -->
+  <link rel="stylesheet" href="css/emlak2.css" /> <!-- Harici CSS dosyası bağlantısı -->
 </head>
 <body>
+
+  <!-- Üst menü ve başlık -->
   <header>
     <div class="container">
-      <h1 class="logo">AVCI Emlak</h1>
+      <h1 class="logo">AVCI Emlak</h1> <!-- Logo metni -->
       <nav>
         <ul>
+          <!-- Menü bağlantıları -->
           <li><a href="#">Anasayfa</a></li>
           <li><a href="#ilanlar">İlanlar</a></li>
           <li><a href="#hakkimizda">Hakkımızda</a></li>
@@ -21,33 +24,48 @@
     </div>
   </header>
 
-  <section class="search-section">
+  <!-- Depremden kazanç teması bölümü -->
+  <section class="deprem-temasi">
     <div class="container">
-      <h2>Evinizi Hemen Bulun!</h2>
-      <input type="text" id="searchInput" placeholder="Şehir, ilçe veya mahalle girin...">
-      <button onclick="aramaYap()">Ara</button>
+      <h2>Depremden Kazanç Olmaz</h2>
+      <p>Avcı Emlak olarak, afet sonrası fırsatçılığa karşı duruyoruz. Fiyatlarımızda vicdan ve dürüstlük esastır.</p>
     </div>
   </section>
 
-  <section class="filter-section container">
-    <label>
-      Oda Sayısı:
-      <select id="odaSelect">
-        <option value="hepsi">Hepsi</option>
-        <option value="1+1">1+1</option>
-        <option value="2+1">2+1</option>
-        <option value="3+1">3+1</option>
-      </select>
-    </label>
-    <label>
-      Max Fiyat:
-      <input type="number" id="fiyatMax" placeholder="TL">
-    </label>
-    <button onclick="filtrele()">Filtrele</button>
+  <!-- Arama alanı -->
+  <section class="search-section">
+    <div class="container">
+      <h2>Evinizi Hemen Bulun!</h2>
+      <input type="text" id="searchInput" placeholder="Şehir, ilçe veya mahalle girin..."> <!-- Arama kutusu -->
+      <button onclick="aramaYap()">Ara</button> <!-- JavaScript fonksiyonu ile arama -->
+    </div>
   </section>
 
-  <!-- İlanlar -->
+  <!-- Filtreleme alanı -->
+  <section class="filter-section container">
+    <h3>Filtrele</h3>
+    <div class="filter-group">
+      <!-- Oda sayısı filtresi -->
+      <label>
+        Oda Sayısı:
+        <select id="odaSelect">
+          <!-- Bu seçenekler JavaScript tarafından kullanılır -->
+          ...
+        </select>
+      </label>
+      <!-- Fiyat filtresi -->
+      <label>
+        Max Fiyat:
+        <input type="number" id="fiyatMax" placeholder="TL">
+      </label>
+      <!-- Filtrele butonu -->
+      <button onclick="filtrele()">Filtrele</button>
+    </div>
+  </section>
+
+  <!-- İlanlar bölümü -->
   <section class="ilanlar container" id="ilanlar">
+    <!-- İlan kartı 1 -->
     <div class="ilan-karti">
       <img src="fotolar/apartman-4668-m2-b.jpg" alt="Ev 1">
       <h3>3+1 Daire - İstanbul</h3>
@@ -55,6 +73,7 @@
       <a href="ilan1.html" class="detay-btn">Detaylar</a>
     </div>
 
+    <!-- İlan kartı 2 -->
     <div class="ilan-karti">
       <img src="fotolar/apartman-kurallari-855x855.jpg" alt="Ev 2">
       <h3>2+1 Bahçeli - Ankara</h3>
@@ -62,10 +81,14 @@
       <button>Detaylar</button>
     </div>
 
+    <!-- İlan ekleme butonu -->
     <div class="add-listing-container">
-      <button class="add-listing-button">İlan Ekle</button>
+      <a href="ilan-ekle.html">
+        <button class="add-listing-button">İlan Ekle</button>
+      </a>
     </div>
 
+    <!-- İlan kartı 3 -->
     <div class="ilan-karti">
       <img src="fotolar/istockphoto-1440568749-612x612.jpg" alt="Ev 3">
       <h3>1+1 Loft - İzmir</h3>
@@ -74,23 +97,68 @@
     </div>
   </section>
 
-  <!-- Hakkımızda -->
+  <!-- Hakkımızda bölümü -->
   <section id="hakkimizda" class="container" style="margin-bottom: 40px;">
     <h2>Hakkımızda</h2>
     <p style="text-align:center;">Avcı Emlak, Türkiye genelinde en güvenilir emlak hizmetini sunar. 10 yılı aşkın deneyimimizle hayalinizdeki evi bulmanız için buradayız.</p>
   </section>
 
-  <!-- İletişim -->
+  <!-- İletişim bölümü -->
   <section id="iletisim" class="container" style="margin-bottom: 40px;">
     <h2>İletişim</h2>
-    <p style="text-align:center;">Bize ulaşmak için: <br> Email: avciemlak@gmail.com | Telefon: 0539 367 52 28</p>
+    <p style="text-align:center;">
+      Bize ulaşmak için: <br>
+      Email: avciemlak@gmail.com | Telefon: 0539 367 52 28<br>
+      ANTALYA/ALANYA
+    </p>
   </section>
 
+  <!-- Yorumlar bölümü -->
+  <section id="yorumlar" class="container yorumlar-bolumu">
+    <h2>Kullanıcı Yorumları</h2>
+    <!-- Yorum formu -->
+    <form id="yorumForm" class="yorum-form">
+      <input type="text" id="kullaniciAdi" placeholder="Adınız" required>
+      <textarea id="yorumMetni" placeholder="Yorumunuz..." rows="4" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+    <!-- Gönderilen yorumların listeleneceği alan -->
+    <div id="yorumListesi" class="yorum-listesi"></div>
+  </section>
+
+  <!-- Harita bölümü -->
+  <div class="container" style="margin-bottom: 40px;">
+    <h3 style="text-align:center;">Ofisimizin Konumu</h3>
+    <div style="width: 100%; height: 400px;">
+      <!-- Google Harita iframe yerleştirme -->
+      <iframe
+        src="https://www.google.com/maps/embed?... (kısaltıldı)"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <!-- Sosyal medya simgeleri -->
+  <div class="social-bar">
+    <a href="https://wa.me/905393675228" target="_blank" title="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" height="40">
+    </a>
+    <a href="https://www.instagram.com/kaanaavci01/" target="_blank" title="Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="40" height="40">
+    </a>
+    <a href="https://www.facebook.com/hesabımyok" target="_blank" title="Facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="40" height="40">
+    </a>
+    <!-- Google Maps bağlantısı da var ama simge değil, istersen burayı sadeleştirebiliriz -->
+  </div>
+
+  <!-- Footer / Alt bilgi -->
   <footer>
     <p>&copy; 2025 Avcı Emlak | Tüm hakları saklıdır.</p>
   </footer>
 
+  <!-- JavaScript dosyası bağlantısı -->
   <script src="js/emlak.js"></script>
+
 </body>
 </html>
-
